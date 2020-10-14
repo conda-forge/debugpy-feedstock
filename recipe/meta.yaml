@@ -1,5 +1,5 @@
 {% set name = "debugpy" %}
-{% set version = "1.0.0b9" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
-  sha256: d57e4854c78d007d9516b8d3ae0c827cd6df87374d6d56d9c4fbc7adfa83546b
+  sha256: b9d896507aad032242ade8ce4482d2f5435ef3c5449b6cd40449816e7f2d78eb
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
@@ -35,10 +35,10 @@ about:
   home: https://github.com/Microsoft/debugpy
   license: MIT
   license_family: MIT
-  license_file: 
-   - LICENSE
-   - ThirdPartyNotices.txt
-  summary: 'An implementation of the Debug Adapter Protocol for Python'
+  license_file:
+    - LICENSE
+    - ThirdPartyNotices.txt
+  summary: An implementation of the Debug Adapter Protocol for Python
   dev_url: https://github.com/microsoft/debugpy
 
 extra:
