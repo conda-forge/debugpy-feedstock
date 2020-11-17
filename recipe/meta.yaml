@@ -24,6 +24,10 @@ requirements:
     - python
 
 test:
+  requires:
+    - pip
+  commands:
+    - pip check
   imports:
     - debugpy
     - debugpy.adapter
