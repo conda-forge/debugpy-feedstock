@@ -1,7 +1,7 @@
 #!/bin/bash
 
 pushd src/debugpy/_vendored/pydevd/pydevd_attach_to_process
-rm *.so *.dll *.dylib *.exe *.pdb
+rm -f *.so *.dll *.dylib *.exe *.pdb
 pushd linux_and_mac
 
 if [[ "${target_platform}" == "osx-64" ]];
