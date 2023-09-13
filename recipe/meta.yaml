@@ -1,5 +1,5 @@
 {% set name = "debugpy" %}
-{% set version = "1.7.0" %}
+{% set version = "1.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
-  sha256: 676911c710e85567b17172db934a71319ed9d995104610ce23fd74a07f66e6f6
+  sha256: 12af2c55b419521e33d5fb21bd022df0b5eb267c3e178f1d374a63a2a6bdccd0
 
 build:
   number: 0
