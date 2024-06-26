@@ -1,5 +1,5 @@
 {% set name = "debugpy" %}
-{% set version = "1.8.1" %}
+{% set version = "1.8.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
-  sha256: f696d6be15be87aef621917585f9bb94b1dc9e8aced570db1b8a6fc14e8f9b42
+  sha256: 95378ed08ed2089221896b9b3a8d021e642c24edc8fef20e5d4342ca8be65c00
 
 build:
   number: 0
@@ -17,6 +17,7 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
   host:
     - python
