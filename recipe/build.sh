@@ -1,6 +1,9 @@
 #!/bin/bash
 
+set -exuo pipefail
+
 pushd src/debugpy/_vendored/pydevd/pydevd_attach_to_process
+ls -l
 rm -f *.so *.dll *.dylib *.exe *.pdb
 pushd linux_and_mac
 
@@ -13,7 +16,7 @@ else
     EXTRA_FLAGS="-shared -nostartfiles"
 fi
 
-${CXX} ${CXXFLAGS} ${EXTRA_FLAGS} -o ${SHARED_LIBRARY} attach.cpp
+${CXX} ${CXXFLAGS} ${LDFLAGS} ${EXTRA_FLAGS} -o ${SHARED_LIBRARY} attach.cpp
 mv ${SHARED_LIBRARY} ../
 popd
 popd
