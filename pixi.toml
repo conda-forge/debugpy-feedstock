@@ -5,7 +5,7 @@
 
 [workspace]
 name = "debugpy-feedstock"
-version = "3.54.1"  # conda-smithy version used to generate this file
+version = "3.55.1"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/debugpy-feedstock"
 authors = ["@conda-forge/debugpy"]
 channels = ["conda-forge"]
@@ -239,6 +239,18 @@ description = "Build debugpy-feedstock with variant win_64_python3.14.____cp314t
 [tasks."inspect-win_64_python3.14.____cp314t"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_python3.14.____cp314t.yaml"
 description = "List contents of debugpy-feedstock packages built for variant win_64_python3.14.____cp314t"
+[tasks."build-win_arm64_python3.14.____cp314"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/win_arm64_python3.14.____cp314.yaml"
+description = "Build debugpy-feedstock with variant win_arm64_python3.14.____cp314 directly (without setup scripts)"
+[tasks."inspect-win_arm64_python3.14.____cp314"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_arm64_python3.14.____cp314.yaml"
+description = "List contents of debugpy-feedstock packages built for variant win_arm64_python3.14.____cp314"
+[tasks."build-win_arm64_python3.14.____cp314t"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/win_arm64_python3.14.____cp314t.yaml"
+description = "Build debugpy-feedstock with variant win_arm64_python3.14.____cp314t directly (without setup scripts)"
+[tasks."inspect-win_arm64_python3.14.____cp314t"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_arm64_python3.14.____cp314t.yaml"
+description = "List contents of debugpy-feedstock packages built for variant win_arm64_python3.14.____cp314t"
 
 [feature.smithy.dependencies]
 conda-smithy = "*"
