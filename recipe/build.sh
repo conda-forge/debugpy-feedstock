@@ -13,6 +13,8 @@ else
         SHARED_LIBRARY="attach_linux_amd64${SHLIB_EXT}"
     elif [[ "${target_platform}" == "linux-aarch64" ]]; then
         SHARED_LIBRARY="attach_linux_arm64${SHLIB_EXT}"
+    elif [[ "${target_platform}" == "linux-riscv64" ]]; then
+        SHARED_LIBRARY="attach_linux_riscv64${SHLIB_EXT}"
     fi
     EXTRA_FLAGS="-shared -nostartfiles"
 fi
