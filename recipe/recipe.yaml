@@ -16,7 +16,7 @@ source:
       then: 0001-include-windows-arm64-binaries.patch
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
